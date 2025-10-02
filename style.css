@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #0d0d0d;
+  color: white;
+  line-height: 1.6;
+}
+
+/* Navbar */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background: #0d0d0d;
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.logo span {
+  color: orange;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: orange;
+  font-weight: bold;
+}
+
+/* Hamburger menu hidden on desktop */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 10%;
+}
+
+.hero-text {
+  flex: 1 1 400px;
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  margin-bottom: 20px;
+  color: #cccccc;
+}
+
+button {
+  padding: 12px 25px;
+  border: none;
+  background: orange;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ff6600;
+}
+
+.hero-image {
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  max-width: 600px;
+  border-radius: 20%;
+}
+
+/* Gallery Section (CSS Grid) */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 50px 10%;
+}
+
+.gallery-item {
+  background: #1a1a1a;
+  padding: 40px;
+  text-align: center;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+.gallery-item:hover {
+  background: orange;
+  color: black;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  margin-top: 30px;
+}
+
+/* Active nav link */
+nav ul li a.active {
+  color: orange;
+  font-weight: bold;
+}
+
+/* Page headings */
+.page-heading {
+  text-align: center;
+  padding: 50px 10%;
+}
+
+.page-heading h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.page-heading p {
+  color: #ccc;
+}
+
+/* About Page */
+.about-section {
+  padding: 40px 10%;
+  font-size: 1.1rem;
+  color: #ddd;
+  line-height: 1.8;
+}
+
+/* Contact Form */
+.contact-form {
+  display: flex;
+  justify-content: center;
+  padding: 40px 10%;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+}
+
+.contact-form button {
+  padding: 12px;
+  border: none;
+  background: orange;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #ff6600;
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 10%;
+    background: #111;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    color: white;
+  }
+}
